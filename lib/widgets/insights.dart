@@ -12,7 +12,7 @@ class InsightsCard extends StatelessWidget {
           height: 256,
           color: Colors.blueAccent,
         ),
-        BarChartWidget(),
+        const BarChartWidget(),
       ],
     );
   }

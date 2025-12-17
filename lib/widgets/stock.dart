@@ -12,7 +12,7 @@ class Stock extends StatelessWidget {
           color: Colors.redAccent,
           height: 376,
         ),
-        LineChartWidget()
+        const LineChartWidget()
       ],
     );
   }
