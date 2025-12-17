@@ -1,0 +1,17 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+/build/
+/.idea/
+*.iml
+*.ipr
+*.iws
+*.DS_Store
+*.log
+*.flutter-plugins
+*.flutter-plugins-dependencies
+.pub/
+
+# Generated plugin registrant
+/generated_plugin_registrant.dart
