@@ -1,6 +1,6 @@
 name: sav_practical
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.0.1+1
 
 environment:
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  fl_chart: ^1.1.1
 
 dev_dependencies:
   flutter_test:

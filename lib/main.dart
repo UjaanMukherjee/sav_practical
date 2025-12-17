@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sav_practical/widgets/banner.dart';
+import 'package:sav_practical/widgets/insights.dart';
+import 'package:sav_practical/widgets/navbar.dart';
+import 'package:sav_practical/widgets/similar_items.dart';
+import 'package:sav_practical/widgets/stock.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +17,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'sav_practical',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Sav Practical'),
-        ),
-        body: Center(
-          child: Text('Hello, Sav Practical!'),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                NavBar(),
+                Stock(),
+                InsightsCard(),
+                BannerCard(),
+                SimilarItems(),
+              ],
+            ),
+          ),
         ),
       ),
     );
