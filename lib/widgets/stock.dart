@@ -2,18 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sav_practical/helpers/helpers.dart';
 import 'package:sav_practical/widgets/line_chart.dart';
-import 'package:fl_chart/fl_chart.dart';
 
 class Stock extends StatelessWidget {
   const Stock({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Stack(
-      children: [
-        StockCard(),
-        _AppleLogo(),
-      ],
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 36.0),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            top: -4,
+            left: 130,
+            child: Container(
+              height: 52,
+              width: 52,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: Colors.grey.withAlpha(50)),
+              ),
+            ),
+          ),
+          StockCard(),
+          Positioned(child: _AppleLogo()),
+        ],
+      ),
     );
   }
 }
@@ -193,6 +208,83 @@ class _TodayValueWidget extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 letterSpacing: 0,
                 color: const Color(0xFF295139),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class StockQuickActionCard extends StatelessWidget {
+  const StockQuickActionCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(color: Colors.black.withAlpha(50))),
+        child: Row(
+          children: [
+            // Apple icon container
+            Container(
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Icon(
+                Icons.apple,
+                color: Colors.white,
+                size: 24,
+              ),
+            ),
+
+            const SizedBox(width: 12),
+
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    '\$195.31',
+                    style: TextStyles.dmSansBlack(fontSize: 16),
+                  ),
+                  Text(
+                    '+1.46% today',
+                    style: GoogleFonts.dmSans(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.green.shade800,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Invest button
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF5F6F4),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: GradientHelper.greenTextGradient(
+                Text(
+                  'Invest',
+                  style: GoogleFonts.dmSans(
+                    color: Colors.white,
+                    fontSize: 14.0,
+                  ),
+                ),
               ),
             ),
           ],

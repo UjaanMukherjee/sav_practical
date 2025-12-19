@@ -178,7 +178,7 @@ class InsightsCard extends StatelessWidget {
 
                 // ───────── Bar Chart ─────────
                 SizedBox(
-                  height: 70,
+                  height: 50,
                   child: BarChart(
                     BarChartData(
                       alignment: BarChartAlignment.spaceAround,

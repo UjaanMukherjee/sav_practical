@@ -18,24 +18,37 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 72,
-      child: Row(
-        children: [
-          if (leadingIcon != null)
-            IconButton(
-              icon: Icon(leadingIcon!),
-              onPressed: onLeadingPressed,
-            ),
-          const Spacer(),
-          MarketStatusHeader(title: title),
-          const Spacer(),
-          if (trailingIcon != null)
-            IconButton(
-              icon: Icon(trailingIcon!),
-              onPressed: onTrailingPressed,
-            ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 36.0),
+      child: SizedBox(
+        height: 72,
+        child: Row(
+          children: [
+            if (leadingIcon != null)
+              IconButton(
+                icon: Icon(leadingIcon!),
+                onPressed: onLeadingPressed,
+              ),
+            const Spacer(),
+            MarketStatusHeader(title: title),
+            const Spacer(),
+            if (trailingIcon != null)
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(
+                    color: Colors.grey.withAlpha(60),
+                    width: 1,
+                  ),
+                ),
+                //padding: const EdgeInsets.all(1),
+                child: IconButton(
+                  icon: Icon(trailingIcon!),
+                  onPressed: onTrailingPressed,
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
@@ -107,6 +120,19 @@ class MarketStatusHeader extends StatelessWidget {
               ),
             ),
           ),
+
+          Positioned(
+            bottom: 21,
+            left: 76,
+            child: Container(
+              width: 6.5,
+              height: 6.5,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(40),
+              ),
+            ),
+          )
         ],
       ),
     );

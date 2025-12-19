@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
                 const InsightsCard(),
                 const BannerCard(),
                 const SimilarItems(),
+                const StockQuickActionCard(),
               ],
             ),
           ),

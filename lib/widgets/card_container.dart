@@ -71,12 +71,13 @@ class CardContainer extends StatelessWidget {
           ),
           Container(
             width: 320,
+            height: 218,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(28),
               gradient: LinearGradient(
                 colors: [
                   const Color(0xFF1F1F1F).withAlpha(100),
-                  const Color(0xFF1F1F1F).withAlpha(2),
+                  const Color(0xFF1F1F1F).withAlpha(32),
                 ],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
