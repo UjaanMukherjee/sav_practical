@@ -19,22 +19,19 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 36.0),
-              child: Column(
-                children: [
-                  NavBar(
-                      title: "Markets Open",
-                      leadingIcon: Icons.arrow_back,
-                      trailingIcon: Icons.bookmark_border,
-                      onLeadingPressed: () {},
-                      onTrailingPressed: () {}),
-                  const Stock(),
-                  const InsightsCard(),
-                  const BannerCard(),
-                  const SimilarItems(),
-                ],
-              ),
+            child: Column(
+              children: [
+                NavBar(
+                    title: "Markets Open",
+                    leadingIcon: Icons.arrow_back,
+                    trailingIcon: Icons.bookmark_border,
+                    onLeadingPressed: () {},
+                    onTrailingPressed: () {}),
+                const Stock(),
+                const InsightsCard(),
+                const BannerCard(),
+                const SimilarItems(),
+              ],
             ),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sav_practical/helpers/helpers.dart';
 import 'package:sav_practical/widgets/line_chart.dart';
 import 'package:fl_chart/fl_chart.dart';
 
@@ -96,25 +97,28 @@ class StockCard extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    _greenShader(Text(
-                      '\$',
-                      style: GoogleFonts.manrope(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 0,
-                        color: Colors.white,
+                    GradientHelper.greenTextGradient(
+                      Text(
+                        '\$',
+                        style: GoogleFonts.manrope(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0,
+                          color: Colors.white,
+                        ),
                       ),
-                    )),
-                    _greenShader(
+                    ),
+                    GradientHelper.greenTextGradient(
                       Text(
                         '195.31',
                         style: GoogleFonts.interTight(
-                            fontSize: 40,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0,
-                            color: Colors.white),
+                          fontSize: 40,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0,
+                          color: Colors.white,
+                        ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -126,25 +130,6 @@ class StockCard extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  ShaderMask _greenShader(Widget child) {
-    return ShaderMask(
-      shaderCallback: (Rect bounds) {
-        return const LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          stops: [0.5, 0.8, 0.9],
-          colors: [
-            Color(0xFF1F3822),
-            Color(0xFF437A61),
-            Color(0xFF5B9A74),
-          ],
-        ).createShader(bounds);
-      },
-      blendMode: BlendMode.srcIn,
-      child: child,
     );
   }
 }
