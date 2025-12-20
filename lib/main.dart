@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'sav_practical',
+      title: 'Sav Practical Flutter Demo',
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(

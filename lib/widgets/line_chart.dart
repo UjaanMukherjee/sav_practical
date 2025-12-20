@@ -104,7 +104,7 @@ class LineChartWidget extends StatelessWidget {
                   ).createShader(bounds);
                 },
                 blendMode: BlendMode.dstIn,
-                child: Stack(
+                child: const Stack(
                   children: [
                     Positioned(
                         left: 120, top: 5, child: RippleEffect(size: 32)),
@@ -182,9 +182,9 @@ class RippleEffect extends StatelessWidget {
         gradient: RadialGradient(
           radius: 0.55,
           colors: [
-            Color(0xFFF1F9F1).withAlpha(0),
-            Color(0xFF5B9A74).withAlpha(90),
-            Color(0xFF437A61).withAlpha(240),
+            const Color(0xFFF1F9F1).withAlpha(0),
+            const Color(0xFF5B9A74).withAlpha(90),
+            const Color(0xFF437A61).withAlpha(240),
           ],
           stops: const [0.0, 0.4, 1.0],
         ),

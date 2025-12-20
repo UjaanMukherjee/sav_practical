@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sav_practical/helpers/helpers.dart';
 
 class NavBar extends StatelessWidget {
   final String title;
@@ -72,13 +73,7 @@ class MarketStatusHeader extends StatelessWidget {
             top: 16,
             child: Text(
               title,
-              style: GoogleFonts.dmSans(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.normal,
-                letterSpacing: 0,
-                color: const Color.fromRGBO(119, 118, 118, 1),
-              ),
+              style: TextStyles.dmSansGrey(fontWeight: FontWeight.w500),
             ),
           ),
 
@@ -152,9 +147,9 @@ class _CurvePainter extends CustomPainter {
         begin: Alignment.topLeft,
         end: Alignment.centerRight,
         colors: [
-          Color(0x004E7F68), // transparent edge
-          Color(0xFF4E7F68), // color of center
-          Color(0x004E7F68), // transparent edge
+          Color(0x004E7F68),
+          Color(0xFF4E7F68),
+          Color(0x004E7F68),
         ],
         stops: [0.2, 0.5, 0.8],
       ).createShader(rect);

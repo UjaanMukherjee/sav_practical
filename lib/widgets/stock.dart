@@ -8,25 +8,13 @@ class Stock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 36.0),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          Positioned(
-            top: -4,
-            left: 130,
-            child: Container(
-              height: 52,
-              width: 52,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: Colors.grey.withAlpha(50)),
-              ),
-            ),
-          ),
           StockCard(),
-          Positioned(child: _AppleLogo()),
+          _AppleLogo(),
         ],
       ),
     );

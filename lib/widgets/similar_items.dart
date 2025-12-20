@@ -8,8 +8,8 @@ class SimilarItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.symmetric(vertical: 36.0),
+    return const Padding(
+      padding: EdgeInsetsDirectional.symmetric(vertical: 36.0),
       child: SimilarToThisCard(),
     );
   }
@@ -23,7 +23,6 @@ class SimilarToThisCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // ───────── Header ─────────
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 52.0),
           child: Row(
@@ -44,18 +43,13 @@ class SimilarToThisCard extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 'Similar To This',
-                style: GoogleFonts.dmSans(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xFF1F1F1F),
-                ),
+                style: TextStyles.dmSansBlack(fontWeight: FontWeight.w600),
               ),
               const Spacer(),
               const Icon(Icons.fullscreen, size: 22),
             ],
           ),
         ),
-
         const SizedBox(height: 14),
         CardContainer(child: _MainCard()),
       ],
@@ -66,10 +60,10 @@ class SimilarToThisCard extends StatelessWidget {
 class _MainCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
+      children: [
         _StockRow(),
         _Divider(),
         _StockRow(),
@@ -95,7 +89,7 @@ class _StockRow extends StatelessWidget {
               'Apple Inc.',
               style: TextStyles.dmSansBlack(),
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             Row(
               children: [
                 Text(
@@ -121,7 +115,7 @@ class _StockRow extends StatelessWidget {
               '\$195.31',
               style: TextStyles.dmSansBlack(),
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             Row(
               children: [
                 Text(
@@ -159,7 +153,6 @@ class _Divider extends StatelessWidget {
         height: 1,
         width: 320,
         decoration: BoxDecoration(
-          //color: Colors.red,
           gradient: LinearGradient(
             colors: [
               Colors.black.withAlpha(2),

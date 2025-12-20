@@ -29,6 +29,7 @@ class TextStyles {
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: const Color(0xFF777676),
+        letterSpacing: 0,
       );
   static TextStyle dmSansBlack({
     double fontSize = 14.0,
@@ -38,5 +39,6 @@ class TextStyles {
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: Colors.black,
+        letterSpacing: 0,
       );
 }

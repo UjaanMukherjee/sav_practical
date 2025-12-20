@@ -6,15 +6,6 @@ class BannerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoInvestCard();
-  }
-}
-
-class AutoInvestCard extends StatelessWidget {
-  const AutoInvestCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.only(top: 64.0),
       child: Stack(
@@ -30,7 +21,7 @@ class AutoInvestCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(28),
               border: Border.all(
-                color: Color(0xFF6447A8).withAlpha(125),
+                color: const Color(0xFF6447A8).withAlpha(125),
                 width: 1,
               ),
               gradient: const LinearGradient(
@@ -44,9 +35,7 @@ class AutoInvestCard extends StatelessWidget {
                 ],
               ),
             ),
-            child:
-                // ───────── Text content ─────────
-                Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -60,7 +49,7 @@ class AutoInvestCard extends StatelessWidget {
                     height: 1.1,
                   ),
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 Text(
                   'Investing consistently helps\naverage out costs over time.',
                   style: GoogleFonts.dmSans(
@@ -73,8 +62,6 @@ class AutoInvestCard extends StatelessWidget {
               ],
             ),
           ),
-
-          // ───────── Arrow button ─────────
           Positioned(
             right: 22,
             bottom: 32,
@@ -82,7 +69,7 @@ class AutoInvestCard extends StatelessWidget {
               width: 42,
               height: 42,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withAlpha(200),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(
@@ -91,7 +78,6 @@ class AutoInvestCard extends StatelessWidget {
               ),
             ),
           ),
-          // ───────── Illustration placeholder ─────────
           const Positioned(
             right: 0,
             top: -55,
