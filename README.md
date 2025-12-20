@@ -1,6 +1,6 @@
-# sav_practical
+# Sav Practical Flutter Demo
 
-A minimal Flutter project created for you.
+A minimal Flutter project created for Sav Practical Demo purpose.
 
 ## Quick start
 
